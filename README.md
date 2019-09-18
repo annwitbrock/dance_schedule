@@ -7,4 +7,6 @@ Find today's dance class at your level (in London)
 
 
 Javascript project, initially a homework exercise for JavaScript Crash Course.
+Not open for contributions. Please do not copy.
+
 Copyright Ann Witbrock 2019
