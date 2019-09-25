@@ -6,48 +6,46 @@ const Dancer = require('./dancer');
 
 //-------------------------------
 
+//console.log("Hello World!");
 
-
-console.log("Hello World!");
-
-function testDay(){
+function testDay() {
     var day = new Day.Day("TestDay");
     console.info(day);
 }
 testDay();
 
-function testStudio(){
+function testStudio() {
     var studio = new Studio.Studio(
-        "Test Studio", 
-        "10 Test Street", 
-        "London", 
+        "Test Studio",
+        "10 Test Street",
+        "London",
         "£1.00"
-        );
+    );
     console.info(studio);
 }
 testStudio();
 
-function testDanceClass(){
+function testDanceClass() {
     var danceclass = new DanceClass.DanceClass(
-        "Test Class", 
+        "Test Class",
         "Ballet",
-        "Pro", 
-        "£8.00", 
-        "TestDay", 
+        "Pro",
+        "£8.00",
+        "TestDay",
         "15:00",
         "Test Studio"
-        );
+    );
     console.info(danceclass);
 }
 testDanceClass();
 
-function testDancer(){
+function testDancer() {
     var dancer = new Dancer.Dancer(
-        "Ann", 
-        "Pro", 
-        "TestDay", 
+        "Ann",
+        "Pro",
+        "TestDay",
         "London"
-        );
+    );
     console.info(dancer);
 }
 testDancer();

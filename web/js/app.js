@@ -1,24 +1,52 @@
 "use strict";
-var app = {};
+const Studio = require('./studio');
+const Day = require('./day');
+const DanceClass = require('./danceclass');
+const Dancer = require('./dancer');
 
-function init(){
-    app.days = [
-        new Day("Monday"),
-        new Day("Tuesday"),
-        new Day("Wednesday"),
-        new Day("Thursday"),
-        new Day("Friday"),
-        new Day("Saturday"),
-        new Day("Sunday")
+var studioApp = {};
+
+function init() {
+    studioApp.days = [
+        new Day.Day("Monday"),
+        new Day.Day("Tuesday"),
+        new Day.Day("Wednesday"),
+        new Day.Day("Thursday"),
+        new Day.Day("Friday"),
+        new Day.Day("Saturday"),
+        new Day.Day("Sunday")
     ];
 
-    app.studios = [
-    	new Studio("FakeStudio")];
+    studioApp.studios = [
+        new Studio.Studio(
+            "Fake Studio",
+            "10 Fake Street",
+            "London",
+            "£1.00"
+        )
+    ];
 
-    app.danceclasses = [];
+    studioApp.danceclasses = [
+        new DanceClass.DanceClass(
+            "Fake Class",
+            "Ballet",
+            "Pro",
+            "£8.00",
+            "Tuesday",
+            "15:00",
+            "Fake Studio"
+        )
+    ];
 
-    app.dancers = []
+    studioApp.dancers = [
+        new Dancer.Dancer(
+            "Ann",
+            "Pro",
+            "Tuesday",
+            "London"
+        )
+    ]
 }
 init();
-console.info(app.days);
 
+console.info(studioApp);
