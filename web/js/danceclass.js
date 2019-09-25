@@ -1,3 +1,4 @@
+
 var DanceClass = class {
   constructor(name, style, level, price, day, time, studio) {
     this.className = name;
@@ -9,3 +10,6 @@ var DanceClass = class {
     this.studio = studio
   }
 }
+
+//console.log(DanceClass);
+module.exports = {DanceClass} //exports.DanceClass = DanceClass;

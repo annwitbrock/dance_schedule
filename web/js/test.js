@@ -1,38 +1,23 @@
 "use strict";
-var testApp;
+const Studio = require('./studio');
+const Day = require('./day');
+const DanceClass = require('./danceclass');
+const Dancer = require('./dancer');
 
 //-------------------------------
 
-if (typeof WSH !== 'undefined'){
-    var console = {
-        info: function (s){
-            WSH.Echo(s);
-        },
-        log: function (s){
-            WSH.Echo(s);
-        }
-    };
-    var document = {
-        write : function (s){
-            WSH.Echo(s);
-        }
-    };
-    var alert = function (s){
-        WSH.Echo(s);
-    };
-}
 
-//-----------------------------------
+
 console.log("Hello World!");
 
 function testDay(){
-    var day = new Day("TestDay");
+    var day = new Day.Day("TestDay");
     console.info(day);
 }
 testDay();
 
 function testStudio(){
-    var studio = new Studio(
+    var studio = new Studio.Studio(
         "Test Studio", 
         "10 Test Street", 
         "London", 
@@ -43,7 +28,7 @@ function testStudio(){
 testStudio();
 
 function testDanceClass(){
-    var danceclass = new DanceClass(
+    var danceclass = new DanceClass.DanceClass(
         "Test Class", 
         "Ballet",
         "Pro", 
@@ -57,7 +42,7 @@ function testDanceClass(){
 testDanceClass();
 
 function testDancer(){
-    var dancer = new Dancer(
+    var dancer = new Dancer.Dancer(
         "Ann", 
         "Pro", 
         "TestDay", 

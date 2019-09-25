@@ -1,3 +1,5 @@
+"use strict";
+
 var Studio = class {
     constructor(name, address, city, fee) {
         this.studioName = name;
@@ -13,3 +15,6 @@ var Studio = class {
 }
 
 var Studios = []
+
+//console.log(Studio);
+module.exports = {Studio} //exports.Studio = Studio;

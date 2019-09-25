@@ -7,3 +7,6 @@ var Dancer = class {
     }
 
 }
+
+//console.log(Dancer);
+module.exports = {Dancer} //exports.Dancer = Dancer;
